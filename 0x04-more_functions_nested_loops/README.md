@@ -1,1 +1,1 @@
-6-print_line.c
+7-print_diagonal.c
