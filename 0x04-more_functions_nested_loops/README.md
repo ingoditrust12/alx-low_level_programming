@@ -1,1 +1,1 @@
-10-print_triangle.c
+100-prime_factor.c
