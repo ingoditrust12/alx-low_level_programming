@@ -1,1 +1,1 @@
-9-fizz_buzz.c
+10-print_triangle.c
