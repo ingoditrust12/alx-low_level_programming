@@ -1,40 +1,13 @@
-#include "main.h"
-#include <stdio.h>
-/*#include <stdlib.h>*/
-/**
- * add - function that adds two integers
- * @a: first integer
- * @b: second integer
- * Return: sum
- */
-int add(int a, int b)
-{
-	return (a + b);
-}
+import ctypes
 
-/**
- * sub - subtracts two integers
- * @a: first integer
- * @b: second integer
- * Return: differencr
- */
-int sub(int a, int b)
-{
-	return (a - b);
-}
+# Load the dynamic library
+lib = ctypes.CDLL('./libexample.so')
 
-/**
- * mul - multiplies two integers
- * @a: first integer
- * @b: second integer
- * Return: their product
- */
-int mul(int a, int b)
-{
-	return (a * b);
-}
+# Define the function prototype
+lib.add_numbers.argtypes = [ctypes.c_int, ctypes.c_int]
+lib.add_numbers.restype = ctypes.c_int
 
-/**
- * div - divides an integer by anotjjer integer
- * @a: integer
- * 
+# Call the function
+result = lib.add_numbers(2, 3)
+print(result)  # Output: 5
+ 
